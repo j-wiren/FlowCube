@@ -1,16 +1,23 @@
 <template>
-  <div>
-    <img src="logo.png" alt="logo">
-  </div>
+  <v-app>
+    <v-main>
+      <HelloWorld/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
+import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App'
+  name: 'App',
+
+  components: {
+    HelloWorld,
+  },
+
+  data: () => ({
+    //
+  }),
 }
 </script>
-
-<style>
-
-</style>
