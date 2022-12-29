@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <div class="d-flex overflow-x-scroll">
+      <div class="scroll-container d-flex overflow-x-scroll">
         <info-dump v-for="(infoItem, index) in info"
           :key="index"
           :info="infoItem"
@@ -74,3 +74,16 @@
     },
   })
 </script>
+
+<style>
+ /* Hide scrollbar for Chrome, Safari and Opera */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scroll-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+</style>
