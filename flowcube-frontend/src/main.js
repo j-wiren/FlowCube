@@ -19,11 +19,13 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/pages/Home.vue'
 import FlowInfo from '@/pages/FlowInfo.vue'
 import SelectMode from '@/pages/SelectMode.vue'
+import SetTimer from '@/pages/SetTimer'
 
 const routes = [
     { path: '/', name: 'Home', component: Home },
     { path: '/flow-info', name: 'FlowInfo', component: FlowInfo },
-    { path: '/select-mode', name: 'SelectMode', component: SelectMode }
+    { path: '/select-mode', name: 'SelectMode', component: SelectMode },
+    { path: '/set-timer', name: 'SetTimer', component: SetTimer }
 ]
 
 const router = createRouter({

@@ -1,14 +1,11 @@
 <template>
-    <v-app>
-        <v-main>
-            <div class="d-flex flex-column align-center">
-                <select-cube></select-cube>
-                <router-link to="/flow-info">
-                    <v-btn>Läs vår guide till Flow</v-btn>
-                </router-link>
-            </div>
-        </v-main>
-    </v-app>
+    <div>
+        <h4 class="text-h4 font-weight-bold mb-8">Choose an available Flow Cube</h4>
+        <select-cube></select-cube>
+        <router-link to="/flow-info">
+            <v-btn>Läs vår guide till Flow</v-btn>
+        </router-link>
+    </div>
 </template>
 
 <script>
@@ -19,3 +16,6 @@ export default {
 }
 
 </script>
+
+<style>
+</style>

@@ -1,6 +1,16 @@
 <template>
-    <h2 class="text-h2 font-weight-bold">Välj ett läge</h2>
-    <v-btn v-for="mode in modes" @click="doThing(mode.webhookId)">{{ mode.name }}</v-btn>
+    <div class="d-flex flex-column">
+        <h2 class="text-h2 font-weight-bold">Välj ett läge</h2>
+        <v-btn
+            v-for="mode in modes"
+            @click="doThing(mode.webhookId)"
+            >
+            {{ mode.name }}
+        </v-btn>
+        <router-link to="/set-timer">
+            <v-btn color="primary" class="text-body-1 mt-8">Gå vidare</v-btn>
+        </router-link>
+    </div>
 </template>
 
 <script>
