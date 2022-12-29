@@ -52,9 +52,11 @@ export default {
 
     complete: function() {
       clearInterval(this.timerObj)
+      this.doThing("-TPgvqhjDcca7ZlKFd3WRnoZn")
       this.timerOn = false
       this.breakTime = true
       this.setBreakTime()
+      this.title = "Snyggt jobbat! Ta en paus"
     },
 
     cancel: function() {
@@ -66,7 +68,17 @@ export default {
     setBreakTime: function() {
       this.min = 5
       this.sec = 0
-      this.title = "Snyggt jobbat! Ta en paus"
+    },
+
+    async doThing(webhook) { 
+      response = await fetch('http://192.168.1.54:9102/api/webhook/' + webhook, {
+        method: 'POST', 
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: ""
+      })
+      response();
     }
   },
   computed: {
