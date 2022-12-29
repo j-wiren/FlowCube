@@ -18,10 +18,12 @@ import { createRouter, createWebHistory } from 'vue-router'
 // Routes
 import Home from '@/pages/Home.vue'
 import FlowInfo from '@/pages/FlowInfo.vue'
+import SelectMode from '@/pages/SelectMode.vue'
 
 const routes = [
     { path: '/', name: 'Home', component: Home },
-    { path: '/flow-info', name: 'FlowInfo', component: FlowInfo }
+    { path: '/flow-info', name: 'FlowInfo', component: FlowInfo },
+    { path: '/select-mode', name: 'SelectMode', component: SelectMode }
 ]
 
 const router = createRouter({

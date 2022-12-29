@@ -6,7 +6,9 @@
       <v-list lines="one" v-if="this.info.ul">
         <v-list-item v-for="item in this.info.ul" class="text-body-1">{{ item }}</v-list-item>
       </v-list>
-      <v-btn v-if="this.info.lastPage" color="primary" class="text-body-1 mt-8">Gå vidare</v-btn>
+      <router-link to="/select-mode">
+        <v-btn v-if="this.info.lastPage"  color="primary" class="text-body-1 mt-8">Gå vidare</v-btn>
+      </router-link>
     </div>
   </div>
 </template>
