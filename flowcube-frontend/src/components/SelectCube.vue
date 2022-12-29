@@ -1,9 +1,5 @@
 <template>
   <v-container class="fill-height bg-gray">
-    <v-app-bar elevation="5" rounded>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
-    </v-app-bar>
     <v-responsive class="d-flex align-center text-center fill-height">
       <h4 class="text-h4 font-weight-bold mb-8">Choose an available Flow Cube</h4>
       <v-sheet class="d-flex flex-column rounded-xl mx-auto pa-12" height="400" width="300" elevation="5">

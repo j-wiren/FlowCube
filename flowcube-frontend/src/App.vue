@@ -1,80 +1,10 @@
 <template>
-  <v-app>
-    <v-main>
-      <!-- <select-cube @doThing="doThing"></select-cube> -->
-      <div class="d-flex overflow-x-scroll">
-        <info-dump v-for="(infoItem, index) in info"
-          :key="index"
-          :info="infoItem"
-        >
-        </info-dump>
-      </div>
-    </v-main>
-  </v-app>
+  <!-- <select-cube @doThing="doThing"></select-cube> -->
+  <router-view></router-view>
 </template>
 
 <script>
-  // import SelectCube from '@/components/SelectCube.vue'
-  import InfoDump from '@/components/InfoDump.vue'
   export default ({
-    components: { 
-      // SelectCube,
-      InfoDump
-    },
-    data() {
-      return {
-        info: [
-          {
-            title: "1. Vad är flow?",
-            body: [
-              "Flow är att state of mind / sinnestillstånd som kännetecknas av att en individ är helt uppslukad av en aktivitet och går bortom sin reflekterande självmedvetenhet samtidigt som personen upplever en djup känsla av kontroll."
-            ]
-          },
-          {
-            title: "2. Mihalys tre faktorer",
-            body: [
-              "Forskaren säger:",
-            ],
-            ul: [
-              "1. Definiera aktiviteten",
-              "2. Dela upp mål",
-              "3. Ge dig själv feedback",
-
-            ]
-          },
-          {
-            title: "3. Definiera aktiviteten",
-            body: [
-              "För att komma igång med din session behöver du först veta och definiera aktiviteten.",
-              "Tänk efter... Vad vill du åstadkomma?",
-          ]
-          },
-          {
-            title: "4. Dela upp mål",
-            body: [
-              "När du vet vad du vill åstadkomma är det möjligt att det känns överväldigande. Då är det bra att dela upp aktiviteten i mindre, nåbara mål.",
-              "Vilka delmål ser du med din aktivitet?"
-            ]
-          },
-          {
-            title: "5. Ge dig själv feedback",
-            body: [
-              "Det är viktigt att du skapar en feedback-loop för dig själv, så att du vet när du kommer närmare ditt mål.",
-              "Exv. ?",
-              "Fundera: Hur kan du ge dig själv denna feedback?"
-            ]
-          },
-          {
-            title: "6. Skapa ditt flow",
-            body: [
-              "För att ge dig själv de bästa förutsättningarna fär att uppnå flow måste du lära känna din egen studieteknik och studiemiljö.",
-              "Därför kommer du nu få möjlighet att ställa in ljus och ljud i FlowCube.",
-            ],
-            lastPage: true,
-          },
-        ]
-      }
-    },
     methods: {
       async doThing() { 
         response = await fetch('http://192.168.1.54:9102/api/webhook/-TPgvqhjDcca7ZlKFd3WRnoZn', {
@@ -91,7 +21,4 @@
 </script>
 
 <style>
-body {
-  font-family: 'Times New Roman';
-}
 </style>
