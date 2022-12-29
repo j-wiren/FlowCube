@@ -1,12 +1,12 @@
 <template>
   <div id="timer">
-    <h2 class="text-h2 font-weight-bold">Dags att plugga</h2>
+    <h2 class="text-h2 font-weight-bold">{{ title }}</h2>
     <div class="timer">
       <div class="time">
         {{ formatTime }}
       </div>
-      <v-btn color="green" @click="start" v-if="!timerOn">Starta</v-btn>
-      <v-btn color="red" @click="stop" v-if="timerOn">Pausa</v-btn>
+      <v-btn color="green" @click="start" v-if="!timerOn" class="mx-auto">Starta</v-btn>
+      <v-btn color="red" @click="stop" v-if="timerOn" class="mx-auto">Pausa</v-btn>
     </div>
   </div>
 </template>
@@ -17,10 +17,12 @@ export default {
   name: 'timer',
   data() {
     return {
-      min: 20,
-      sec: 0,
+      title: "Dags att plugga!",
+      min: 0,
+      sec: 5,
       timerOn: false,
       timerObj: null,
+      breakTime: false,
     }
   },
   methods: {
@@ -48,6 +50,15 @@ export default {
 
     complete: function() {
       clearInterval(this.timerObj)
+      this.timerOn = false
+      this.breakTime = true
+      this.setBreakTime()
+    },
+
+    setBreakTime: function() {
+      this.min = 5
+      this.sec = 0
+      this.title = "Snyggt jobbat! Ta en paus"
     }
   },
   computed: {
