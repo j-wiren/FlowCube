@@ -5,8 +5,10 @@
       <div class="time">
         {{ formatTime }}
       </div>
-      <v-btn color="green" @click="start" v-if="!timerOn" class="mx-auto">Starta</v-btn>
-      <v-btn color="red" @click="stop" v-if="timerOn" class="mx-auto">Pausa</v-btn>
+      <v-btn color="green" @click="start" v-if="!timerOn">Starta</v-btn>
+      <v-btn color="white" @click="stop" v-if="timerOn">Pausa</v-btn><br>
+      <v-btn color="red" @click="cancel" class="mt-4">Avbryt</v-btn>
+
     </div>
   </div>
 </template>
@@ -53,6 +55,12 @@ export default {
       this.timerOn = false
       this.breakTime = true
       this.setBreakTime()
+    },
+
+    cancel: function() {
+      this.timerOn = false
+      this.min = 0
+      this.sec = 5
     },
 
     setBreakTime: function() {
