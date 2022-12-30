@@ -5,6 +5,14 @@
 </template>
 
 <script>
+export default {
+  data() {
+    return {
+      studyLength: 20,
+      breakLength: 5
+    }
+  }
+}
 </script>
 
 <style>

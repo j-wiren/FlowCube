@@ -26,7 +26,7 @@
 				>
 		</v-slider>
 		<router-link to="/study-mode">
-				<v-btn color="primary" class="text-body-1 mt-8">Gå vidare</v-btn>
+				<v-btn @click="updateTimerLengths" color="primary" class="text-body-1 mt-8">Gå vidare</v-btn>
 		</router-link>
 	</div>
 </template>
@@ -35,9 +35,15 @@
 export default {
     data () {
         return {
-            studySlider: 25,
-            breakSlider: 5,
+            studySlider: this.$root.studyLength,
+            breakSlider: this.$root.breakLength
         }
+    },
+    methods: {
+      updateTimerLengths: function() {
+        this.$root.studyLength = this.studySlider
+        this.$root.breakLength = this.breakSlider
+      }
     }
 }
 </script>

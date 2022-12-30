@@ -8,8 +8,8 @@
       <v-btn color="green" @click="start" v-if="!timerOn">Starta</v-btn>
       <v-btn color="white" @click="stop" v-if="timerOn">Pausa</v-btn><br>
       <v-btn color="red" @click="cancel" class="mt-4">Avbryt</v-btn>
-
     </div>
+    <p>{{ studyCount }}</p>
   </div>
 </template>
 
@@ -21,10 +21,12 @@ export default {
     return {
       title: "Dags att plugga!",
       min: 0,
-      sec: 5,
+      sec: this.$root.studyLength,
       timerOn: false,
       timerObj: null,
-      breakTime: false,
+      isBreakTime: false,
+      studyCount: 0,
+      breakLength: this.$root.breakLength,
     }
   },
   methods: {
@@ -54,20 +56,33 @@ export default {
       clearInterval(this.timerObj)
       this.doThing("-TPgvqhjDcca7ZlKFd3WRnoZn")
       this.timerOn = false
-      this.breakTime = true
-      this.setBreakTime()
-      this.title = "Snyggt jobbat! Ta en paus"
+      if (!this.isBreakTime) {
+        this.isBreakTime = true
+        this.setBreakTime()
+        this.studyCount++
+        this.title = "Snyggt jobbat! Ta en paus"
+        return
+      }
+      this.isBreakTime = false
+      this.setStudyTime()
+      this.title = "Dags att återgå till arbetet!"
     },
 
     cancel: function() {
-      this.timerOn = false
-      this.min = 0
-      this.sec = 5
+      this.stop()
+      if (this.isBreakTime) {
+        this.setBreakTime()
+        return
+      }
+      this.setStudyTime()
     },
-
+    setStudyTime: function() {
+      this.min = 0
+      this.sec = this.$root.studyLength
+    },
     setBreakTime: function() {
-      this.min = 5
-      this.sec = 0
+      this.min = 0
+      this.sec = this.breakLength
     },
 
     async doThing(webhook) { 
