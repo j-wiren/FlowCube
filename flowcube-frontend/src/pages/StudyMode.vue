@@ -9,7 +9,7 @@
       <v-btn color="white" @click="stop" v-if="timerOn">Pausa</v-btn><br>
       <v-btn color="red" @click="cancel" class="mt-4">Avbryt</v-btn>
     </div>
-    <p>{{ studyCount }}</p>
+    <p class="mt-8 text-h5">Antal studiesessioner: {{ studyCount }}</p>
   </div>
 </template>
 
@@ -44,6 +44,10 @@ export default {
     start: function() {
       let self = this;
       this.timerObj = setInterval(function() {self.count()}, 1000)
+      if (!this.isBreakTime) {
+        this.doThing(this.$root.selectedMode.webhookId)
+      }
+
       this.timerOn = true; //timerがONであることを状態として保持
     },
 
@@ -54,11 +58,11 @@ export default {
 
     complete: function() {
       clearInterval(this.timerObj)
-      this.doThing("-TPgvqhjDcca7ZlKFd3WRnoZn")
       this.timerOn = false
       if (!this.isBreakTime) {
         this.isBreakTime = true
         this.setBreakTime()
+        this.doThing(this.$root.breakMode.webhookId)
         this.studyCount++
         this.title = "Snyggt jobbat! Ta en paus"
         return

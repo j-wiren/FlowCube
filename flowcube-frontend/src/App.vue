@@ -9,7 +9,12 @@ export default {
   data() {
     return {
       studyLength: 20,
-      breakLength: 5
+      breakLength: 5,
+      selectedMode: null,
+      breakMode: {
+        name: "break",
+        webhookId: "-WE3U7f7hEkxkSLxw9pMT4Psx"
+      }
     }
   }
 }
