@@ -1,7 +1,9 @@
 <template>
-  <div class="wrapper">
-    <router-view></router-view>
-  </div>
+  <v-app>
+    <div class="pa-8">
+      <router-view></router-view>
+    </div>
+  </v-app>
 </template>
 
 <script>
@@ -21,8 +23,4 @@ export default {
 </script>
 
 <style>
-  .wrapper {
-      min-height: 100vh;
-
-  }
 </style>

@@ -4,7 +4,7 @@
       <h4 class="text-h4 font-weight-bold">Flow Cube 1</h4>
       <v-img src="./src/assets/logo.png"></v-img>
       <router-link to="/select-mode">
-        <v-btn class="font-weight-bold" variant="outlined">Choose Flow Cube</v-btn>
+        <v-btn color="white" class="font-weight-bold" variant="outlined">Choose Flow Cube</v-btn>
       </router-link>
     </v-sheet>
   </div>

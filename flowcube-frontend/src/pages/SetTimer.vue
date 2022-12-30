@@ -1,6 +1,6 @@
 <template>
-	<div class="w-100 pa-16">
-		<h2 class="text-h2 font-weight-bold mb-8">Anpassa din session</h2>
+	<div>
+		<h2 class="text-h4 font-weight-bold mb-8">Anpassa din session</h2>
 		<div class="text-h5">Hur länge vill du plugga?</div>
 		<v-slider
 			v-model="studySlider"

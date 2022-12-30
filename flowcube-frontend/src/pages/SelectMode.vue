@@ -1,12 +1,13 @@
 <template>
-    <div class="d-flex flex-column">
-        <h2 class="text-h2 font-weight-bold">Välj ett läge</h2>
-        <v-btn
+    <div>
+        <h2 class="text-h4 font-weight-bold mb-8">Välj ett läge</h2>
+        <div class="d-flex flex-wrap cards">
+          <mode-card
             v-for="mode in modes"
-            @click="selectMode(mode)"
-            >
-            {{ mode.name }}
-        </v-btn>
+            @select-mode="selectMode(mode)"
+            :mode="mode">
+          </mode-card>
+        </div>
         <router-link to="/set-timer">
             <v-btn @click="saveSelectedMode" color="primary" class="text-body-1 mt-8">Gå vidare</v-btn>
         </router-link>
@@ -14,12 +15,16 @@
 </template>
 
 <script>
+import ModeCard from "@/components/ModeCard.vue"
   export default ({
+    components: {
+      ModeCard
+    },
     data() {
         return {
             modes: [
                 { name: "Läge 1", webhookId: "-TPgvqhjDcca7ZlKFd3WRnoZn" },
-                { name: "Läge 2", webhookId: "-TPgvqhjDcca7ZlKFd3WRnoZn" }
+                { name: "Läge 2", webhookId: "-h1ZALAY-UdLtd97nZP6z-aQL" }
             ],
             selectedMode: null
         }
@@ -47,3 +52,9 @@
   })
 
 </script>
+
+<style>
+.cards {
+  gap: 1rem;
+}
+</style>

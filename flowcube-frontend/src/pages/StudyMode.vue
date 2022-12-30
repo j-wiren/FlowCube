@@ -1,13 +1,15 @@
 <template>
   <div id="timer">
-    <h2 class="text-h2 font-weight-bold">{{ title }}</h2>
+    <h2 class="text-h4 font-weight-bold">{{ title }}</h2>
     <div class="timer">
       <div class="time">
         {{ formatTime }}
       </div>
-      <v-btn color="green" @click="start" v-if="!timerOn">Starta</v-btn>
-      <v-btn color="white" @click="stop" v-if="timerOn">Pausa</v-btn><br>
-      <v-btn color="red" @click="cancel" class="mt-4">Avbryt</v-btn>
+      <div class="d-flex buttons">
+        <v-btn color="green" @click="start" v-if="!timerOn">Starta</v-btn>
+        <v-btn color="white" @click="stop" v-if="timerOn">Pausa</v-btn>
+        <v-btn color="red" @click="cancel">Avbryt</v-btn>
+      </div>
     </div>
     <p class="mt-8 text-h5">Antal studiesessioner: {{ studyCount }}</p>
   </div>
@@ -128,5 +130,10 @@ export default {
 }
 .time {
   font-size: 100px;
+}
+
+.buttons {
+  gap: 1rem;
+  justify-content: center;
 }
 </style>
