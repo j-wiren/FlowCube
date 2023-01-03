@@ -3,7 +3,8 @@
         <h2 class="text-h4 font-weight-bold mb-8">Välj ett läge</h2>
         <div class="d-flex flex-wrap cards">
           <mode-card
-            v-for="mode in modes"
+            v-for="(mode, key) in modes"
+            :key="key"
             @select-mode="selectMode(mode)"
             :mode="mode">
           </mode-card>
