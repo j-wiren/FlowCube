@@ -1,6 +1,9 @@
 <template>
   <div id="timer">
     <h2 class="text-h4 font-weight-bold">{{ title }}</h2>
+    <ol class="pa-8">
+      <li v-for="listItem in body" :key="listItem.index" class="">{{ listItem }}</li>
+    </ol>
     <div class="timer">
       <div class="time">
         {{ formatTime }}
@@ -29,6 +32,12 @@ export default {
       isBreakTime: false,
       studyCount: 0,
       breakLength: this.$root.breakLength,
+      body: [
+        "Turn off your notifications",
+        "Start the timer",
+        "Put your phone on the table, screen down",
+        "The lights will indicate when it's time for break"
+      ]
     }
   },
   methods: {

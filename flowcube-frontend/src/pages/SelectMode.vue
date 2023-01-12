@@ -5,6 +5,7 @@
           <mode-card
             v-for="(mode, key) in modes"
             :key="key"
+            @select="selectMode(mode)"
             @preview-mode="doThing(mode.webhookId)"
             :mode="mode">
           </mode-card>
