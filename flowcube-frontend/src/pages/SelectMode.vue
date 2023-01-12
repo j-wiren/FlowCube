@@ -32,49 +32,57 @@ import BackButton from "@/components/BackButton.vue"
                   name: "Standardläge",
                   lightingDescription: "Low light, medium white warmth",
                   soundDescription: "Background music",
-                  webhookId: "standard"
+                  webhookId: "standard",
+                  selected: false
                 },
                 {
                   name: "Full Blast",
                   lightingDescription: "Medium light, cold",
                   soundDescription: "Pink noise",
-                  webhookId: "blast"
+                  webhookId: "blast",
+                  selected: false
                 },
                 {
                   name: "Chill",
                   lightingDescription: "Medium light, warm white",
                   soundDescription: "Lo-fi beats to study to",
-                  webhookId: "chill"
+                  webhookId: "chill",
+                  selected: false
                 },
                 {
                   name: "Gamer Mode",
                   lightingDescription: "Medium light, violet",
                   soundDescription: "EDM / Psytrance",
-                  webhookId: "gamer"
+                  webhookId: "gamer",
+                  selected: false
                 },
                 {
                   name: "Classic",
                   lightingDescription: "Medium light, warm white",
                   soundDescription: "Whale Sounds",
-                  webhookId: "classic"
+                  webhookId: "classic",
+                  selected: false
                 },
                 {
                   name: "Jazz",
                   lightingDescription: "Low light, Warm White",
                   soundDescription: "Smooth lowtempo jazz",
-                  webhookId: "jazz"
+                  webhookId: "jazz",
+                  selected: false
                 },
                 {
                   name: "Doomscrolling",
                   lightingDescription: "Low light, cold grey",
                   soundDescription: "Anguish",
-                  webhookId: "doomscrolling"
+                  webhookId: "doomscrolling",
+                  selected: false
                 },
                 {
                   name: "fml",
                   lightingDescription: "Dark",
                   soundDescription: "Silence",
-                  webhookId: "fml"
+                  webhookId: "fml",
+                  selected: false
                 }
             ],
             selectedMode: null
@@ -83,7 +91,12 @@ import BackButton from "@/components/BackButton.vue"
     methods: {
       selectMode: function(selectedMode) {
         this.selectedMode = selectedMode
-        console.log(this.selectedMode)
+        selectedMode.selected = true
+        
+        this.modes.forEach(mode => {
+          if (mode !== selectedMode)
+            mode.selected = false
+        });
       },
       saveSelectedMode: function() {
         this.$root.selectedMode = this.selectedMode
