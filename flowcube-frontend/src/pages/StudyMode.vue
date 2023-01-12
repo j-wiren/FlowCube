@@ -11,7 +11,7 @@
         <v-btn color="red" @click="cancel">Avbryt</v-btn>
       </div>
     </div>
-    <p class="mt-8 text-h5">Antal studiesessioner: {{ studyCount }}</p>
+    <p class="mt-8 text-h5">Study session count: {{ studyCount }}</p>
   </div>
 </template>
 
@@ -21,7 +21,7 @@ export default {
   name: 'timer',
   data() {
     return {
-      title: "Dags att plugga!",
+      title: "Time to study!",
       min: 0,
       sec: this.$root.studyLength,
       timerOn: false,
@@ -66,12 +66,12 @@ export default {
         this.setBreakTime()
         this.doThing(this.$root.breakMode.webhookId)
         this.studyCount++
-        this.title = "Snyggt jobbat! Ta en paus"
+        this.title = "Good work! Time for a break"
         return
       }
       this.isBreakTime = false
       this.setStudyTime()
-      this.title = "Dags att återgå till arbetet!"
+      this.title = "Time to get back to studying!"
     },
 
     cancel: function() {
