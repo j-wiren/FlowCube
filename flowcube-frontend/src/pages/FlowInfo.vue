@@ -33,9 +33,9 @@
               "Research says that there are three conditions for achieving Flow:",
             ],
             ul: [
-              "1. Definie the activity",
-              "2. Divide it into smaller tasks",
-              "3. Allow for feedback that progress is being made",
+              "1. Defining the activity",
+              "2. Dividing it into smaller tasks",
+              "3. Allowing for feedback that progress is being made",
 
             ]
           },
