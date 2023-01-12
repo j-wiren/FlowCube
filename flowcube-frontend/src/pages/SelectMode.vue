@@ -47,13 +47,13 @@ import ModeCard from "@/components/ModeCard.vue"
                   name: "Gamer Mode",
                   lightingDescription: "Medium light, violet",
                   soundDescription: "EDM / Psytrance",
-                  webhookId: ""
+                  webhookId: "gamer"
                 },
                 {
                   name: "Classic",
                   lightingDescription: "Medium light, warm white",
                   soundDescription: "Whale Sounds",
-                  webhookId: ""
+                  webhookId: "classic"
                 },
                 {
                   name: "Jazz",
@@ -65,8 +65,14 @@ import ModeCard from "@/components/ModeCard.vue"
                   name: "Doomscrolling",
                   lightingDescription: "Warm White",
                   soundDescription: "Whale Sounds",
-                  webhookId: ""
+                  webhookId: "doomscrolling"
                 },
+                {
+                  name: "fml",
+                  lightingDescription: "Dark",
+                  soundDescription: "Silence",
+                  webhookId: "fml"
+                }
             ],
             selectedMode: null
         }
