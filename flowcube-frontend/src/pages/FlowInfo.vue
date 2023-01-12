@@ -62,10 +62,10 @@
             ]
           },
           {
-            title: "6. Skapa ditt Flow",
+            title: "6. Create you Flow",
             body: [
               "In order to give yourself the best conditions for achieving flow, you must get to know your own study technique and study environment.",
-               "Therefore, you will now have the opportunity to set light and sound in FlowCube."
+              "Therefore, you will now have the opportunity to set light and sound in FlowCube."
             ],
             lastPage: true,
           },
