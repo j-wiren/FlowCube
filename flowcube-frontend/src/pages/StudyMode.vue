@@ -36,7 +36,15 @@ export default {
         "Turn off your notifications",
         "Start the timer",
         "Put your phone on the table, screen down",
-        "The lights will indicate when it's time for break"
+        "The lights will indicate when it's time for a break"
+      ],
+      loeadingMessages: [
+        "Don't forget to hydrate!",
+        "Tip: take a short walk in the room too get your blood flowing",
+        "Remember to stretch your neck and back",
+        "If you're feeling exhausted, have a snack!",
+        "Try changing the Flow mode if it's not working for you",
+        "Try to avoid overworking yourself, it could affect your Flow negatively"
       ]
     }
   },

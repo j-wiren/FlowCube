@@ -29,19 +29,19 @@ import ModeCard from "@/components/ModeCard.vue"
                   name: "Standardläge",
                   lightingDescription: "Low light, medium white warmth",
                   soundDescription: "Background music",
-                  webhookId: "Standard"
+                  webhookId: "standard"
                 },
                 {
                   name: "Full Blast",
                   lightingDescription: "Medium light, cold",
                   soundDescription: "Pink noise",
-                  webhookId: "-h1ZALAY-UdLtd97nZP6z-aQL"
+                  webhookId: "blast"
                 },
                 {
                   name: "Chill",
                   lightingDescription: "Medium light, warm white",
                   soundDescription: "Lo-fi beats to study to",
-                  webhookId: ""
+                  webhookId: "chill"
                 },
                 {
                   name: "Gamer Mode",
@@ -57,14 +57,14 @@ import ModeCard from "@/components/ModeCard.vue"
                 },
                 {
                   name: "Jazz",
-                  lightingDescription: "Warm White",
-                  soundDescription: "Whale Sounds",
+                  lightingDescription: "Low light, Warm White",
+                  soundDescription: "Smooth lowtempo jazz",
                   webhookId: "jazz"
                 },
                 {
                   name: "Doomscrolling",
-                  lightingDescription: "Warm White",
-                  soundDescription: "Whale Sounds",
+                  lightingDescription: "Low light, cold grey",
+                  soundDescription: "Anguish",
                   webhookId: "doomscrolling"
                 },
                 {
