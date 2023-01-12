@@ -25,16 +25,46 @@ import ModeCard from "@/components/ModeCard.vue"
         return {
             modes: [
                 {
-                  name: "Mode 1",
-                  lightingDescription: "Warm White",
-                  soundDescription: "Whale Sounds",
-                  webhookId: "-TPgvqhjDcca7ZlKFd3WRnoZn"
+                  name: "Standardläge",
+                  lightingDescription: "Low light, medium white warmth",
+                  soundDescription: "Background music",
+                  webhookId: "Standard"
                 },
                 {
-                  name: "Mode 2",
-                  lightingDescription: "Cold",
-                  soundDescription: "Boomer Sounds",
+                  name: "Full Blast",
+                  lightingDescription: "Medium light, cold",
+                  soundDescription: "Pink noise",
                   webhookId: "-h1ZALAY-UdLtd97nZP6z-aQL"
+                },
+                {
+                  name: "Chill",
+                  lightingDescription: "Medium light, warm white",
+                  soundDescription: "Lo-fi beats to study to",
+                  webhookId: ""
+                },
+                {
+                  name: "Gamer Mode",
+                  lightingDescription: "Medium light, violet",
+                  soundDescription: "EDM / Psytrance",
+                  webhookId: ""
+                },
+                {
+                  name: "Classic",
+                  lightingDescription: "Medium light, warm white",
+                  soundDescription: "Whale Sounds",
+                  webhookId: ""
+                },
+                {
+                  name: "Jazz",
+                  lightingDescription: "Warm White",
+                  soundDescription: "Whale Sounds",
+                  webhookId: ""
+                },
+                {
+                  name: "Doomscrolling",
+                  lightingDescription: "Warm White",
+                  soundDescription: "Whale Sounds",
+                  webhookId: ""
                 },
             ],
             selectedMode: null
