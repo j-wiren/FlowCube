@@ -22,50 +22,50 @@
       return {
         info: [
           {
-            title: "1. Vad är flow?",
+            title: "1. What is Flow?",
             body: [
-              "Flow är att state of mind / sinnestillstånd som kännetecknas av att en individ är helt uppslukad av en aktivitet och går bortom sin reflekterande självmedvetenhet samtidigt som personen upplever en djup känsla av kontroll."
+              "Flow is a state of mind characterized by an individual only focusing on performing an activity and as a result losing grasp of what happens around it. This results in high levels of performance and a strong sense of control."   
             ]
           },
           {
-            title: "2. Mihalys tre faktorer",
+            title: "2. Mihalys three factors",
             body: [
-              "Forskaren säger:",
-            ],
+              "Research says that there are three conditions for achieving Flow:",
+            ]
             ul: [
-              "1. Definiera aktiviteten",
-              "2. Dela upp mål",
-              "3. Ge dig själv feedback",
+              "1. Definie the activity",
+              "2. Divide it into smaller tasks",
+              "3. Allow for feedback that progress is being made",
 
             ]
           },
           {
-            title: "3. Definiera aktiviteten",
+            title: "3. Definie the activity",
             body: [
-              "För att komma igång med din session behöver du först veta och definiera aktiviteten.",
-              "Tänk efter... Vad vill du åstadkomma?",
-          ]
-          },
-          {
-            title: "4. Dela upp mål",
-            body: [
-              "När du vet vad du vill åstadkomma är det möjligt att det känns överväldigande. Då är det bra att dela upp aktiviteten i mindre, nåbara mål.",
-              "Vilka delmål ser du med din aktivitet?"
+              "To get started with your session, you first need to understand and define the activity.",
+              "Ask yourself... What to you want to accomplish?"
             ]
           },
           {
-            title: "5. Ge dig själv feedback",
+            title: "4. Divide it into smaller tasks",
             body: [
-              "Det är viktigt att du skapar en feedback-loop för dig själv, så att du vet när du kommer närmare ditt mål.",
-              "Exv. ?",
-              "Fundera: Hur kan du ge dig själv denna feedback?"
+              "When you know what you want to accomplish, it can feel overwhelming. It's good to then divide the activity into smaller, achievable goals.",
+              "What milestones do you see with your activity?"
             ]
           },
           {
-            title: "6. Skapa ditt flow",
+            title: "5. Allow for feedback that progress is being made",
             body: [
-              "För att ge dig själv de bästa förutsättningarna fär att uppnå flow måste du lära känna din egen studieteknik och studiemiljö.",
-              "Därför kommer du nu få möjlighet att ställa in ljus och ljud i FlowCube.",
+              "It is important that you create a feedback loop for yourself, so that you know when you are getting closer to your goal.",
+              "For example: if you're stuck, check back on the smaller tasks you made and start on one of those.",
+              "Think about how giving feedback helps you with your activity!"
+            ]
+          },
+          {
+            title: "6. Skapa ditt Flow",
+            body: [
+              "In order to give yourself the best conditions for achieving flow, you must get to know your own study technique and study environment.",
+               "Therefore, you will now have the opportunity to set light and sound in FlowCube."
             ],
             lastPage: true,
           },

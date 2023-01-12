@@ -6,9 +6,9 @@
         {{ formatTime }}
       </div>
       <div class="d-flex buttons">
-        <v-btn color="green" @click="start" v-if="!timerOn">Starta</v-btn>
-        <v-btn color="white" @click="stop" v-if="timerOn">Pausa</v-btn>
-        <v-btn color="red" @click="cancel">Avbryt</v-btn>
+        <v-btn color="green" @click="start" v-if="!timerOn">Start</v-btn>
+        <v-btn color="white" @click="stop" v-if="timerOn">Stop</v-btn>
+        <v-btn color="red" @click="cancel">Cancel</v-btn>
       </div>
     </div>
     <p class="mt-8 text-h5">Study session count: {{ studyCount }}</p>
