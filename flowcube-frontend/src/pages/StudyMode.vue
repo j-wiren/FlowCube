@@ -1,21 +1,23 @@
 <template>
-  <div id="timer">
+  <div id="timer" class="wrapper-padding">
     <back-button />
-    <h2 class="text-h4 font-weight-bold">{{ title }}</h2>
-    <ol class="pa-8">
-      <li v-for="listItem in body" :key="listItem.index" class="">{{ listItem }}</li>
-    </ol>
+    <div class="min-h-32">
+      <h2 v-if="!timerOn || isBreakTime" class="text-h4 text-center font-weight-bold">{{ title }}</h2>
+      <ul v-if="!timerOn || isBreakTime" class="pa-8">
+        <li v-for="listItem in body" :key="listItem.index" class="text-decoration-none">{{ listItem }}</li>
+      </ul>
+    </div>
     <div class="timer">
-      <div class="time">
+      <div class="time text-center">
         {{ formatTime }}
       </div>
       <div class="d-flex buttons">
-        <v-btn color="green" @click="start" v-if="!timerOn">Start</v-btn>
-        <v-btn color="white" @click="stop" v-if="timerOn">Stop</v-btn>
-        <v-btn color="red" @click="cancel">Cancel</v-btn>
+        <v-btn variant="outlined" color="green" @click="start" v-if="!timerOn">Start</v-btn>
+        <v-btn color="white" @click="stop" v-if="timerOn">Pause</v-btn>
+        <v-btn v-if="timerOn" variant="outlined" color="red" @click="cancel">Cancel</v-btn>
       </div>
     </div>
-    <p class="mt-8 text-h5">Study session count: {{ studyCount }}</p>
+    <p v-if="!timerOn || isBreakTime" class="mt-8 text-h5 text-center text-grey">Study session count: {{ studyCount }}</p>
   </div>
 </template>
 
@@ -36,15 +38,15 @@ export default {
       studyCount: 0,
       breakLength: this.$root.breakLength,
       body: [
-        "Turn off your notifications",
-        "Start the timer",
-        "Put your phone on the table, screen down",
-        "The lights will indicate when it's time for a break"
+        "1. Turn off your notifications",
+        "2. Start the timer",
+        "3. Put your phone on the table, screen down",
+        "4. The lights will indicate when it's time for a break"
       ],
       loadingMessages: [
         "Don't forget to hydrate! 💦",
-        "Tip: take a short walk in the room too get your blood flowing 💃",
-        "Remember to stretch your neck and back 🙆",
+        "Tip: take a short walk in the room to get your blood flowing 💃",
+        "Remember to stretch your neck and back! 🙆",
         "If you're feeling exhausted, have a snack! 🍫",
         "Try changing the Flow mode if it's not working for you 💡",
         "Try to avoid overworking yourself, it could affect your Flow negatively 🧠"
@@ -70,12 +72,12 @@ export default {
         this.doThing(this.$root.selectedMode.webhookId)
       }
 
-      this.timerOn = true; //timerがONであることを状態として保持
+      this.timerOn = true;
     },
 
     stop: function() {
       clearInterval(this.timerObj);
-      this.timerOn = false; //timerがOFFであることを状態として保持
+      this.timerOn = false;
     },
 
     complete: function() {
@@ -86,13 +88,13 @@ export default {
         this.setBreakTime()
         this.doThing(this.$root.breakMode.webhookId)
         this.studyCount++
-        this.title = "Good work! Time for a break"
+        this.title = "Time for a break!"
+        this.setBreakMessage()
         return
       }
       this.isBreakTime = false
       this.setStudyTime()
       this.title = "Time to get back to studying!"
-      this.setBreakMessage()
     },
 
     cancel: function() {
@@ -150,8 +152,6 @@ export default {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 .time {
   font-size: 100px;
@@ -160,5 +160,9 @@ export default {
 .buttons {
   gap: 1rem;
   justify-content: center;
+}
+
+.text-decoration-none {
+  list-style: none;
 }
 </style>

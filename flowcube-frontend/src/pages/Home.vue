@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wrapper-padding">
         <h4 class="text-h4 font-weight-bold mb-8">Choose an available Flow Cube</h4>
         <select-cube></select-cube>
         <router-link to="/flow-info">

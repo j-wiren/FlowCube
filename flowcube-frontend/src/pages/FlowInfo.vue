@@ -28,7 +28,7 @@
             ]
           },
           {
-            title: "2. Mihalys three factors",
+            title: "2. Mihaly's three factors",
             body: [
               "Research says that there are three conditions for achieving Flow:",
             ],
@@ -40,10 +40,10 @@
             ]
           },
           {
-            title: "3. Definie the activity",
+            title: "3. Define the activity",
             body: [
               "To get started with your session, you first need to understand and define the activity.",
-              "Ask yourself... What to you want to accomplish?"
+              "Ask yourself... What do I want to accomplish?"
             ]
           },
           {
@@ -62,10 +62,10 @@
             ]
           },
           {
-            title: "6. Create you Flow",
+            title: "6. Create YOUR Flow",
             body: [
               "In order to give yourself the best conditions for achieving flow, you must get to know your own study technique and study environment.",
-              "Therefore, you will now have the opportunity to set light and sound in FlowCube."
+              "Therefore, you will now have the opportunity to adjust sound and lighting in the Flow Cube, according to your preferences."
             ],
             lastPage: true,
           },

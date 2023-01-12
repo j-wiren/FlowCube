@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="wrapper-padding">
 		<back-button />
 		<h2 class="text-h4 font-weight-bold mb-8">Adjust your session</h2>
 		<div class="text-h5">How long study sessions?</div>

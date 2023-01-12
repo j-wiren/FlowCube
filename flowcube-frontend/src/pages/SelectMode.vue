@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wrapper-padding">
       <back-button />
       <h2 class="text-h4 font-weight-bold mb-8">Select your preferred mode</h2>
       <div class="d-flex flex-column cards">
@@ -92,7 +92,7 @@ import BackButton from "@/components/BackButton.vue"
       selectMode: function(selectedMode) {
         this.selectedMode = selectedMode
         selectedMode.selected = true
-        
+
         this.modes.forEach(mode => {
           if (mode !== selectedMode)
             mode.selected = false

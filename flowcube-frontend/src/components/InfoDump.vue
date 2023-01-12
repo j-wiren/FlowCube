@@ -1,13 +1,16 @@
 <template>
   <div class="h-screen min-width-screen d-flex align-center pa-8">
     <div class="d-flex flex-column justify-center mx-auto text-max-width">
-      <h4 class="text-h4 font-weight-bold mb-4">{{ this.info.title }}</h4>
-      <p v-for="(line, key) in this.info.body" :key="key" class="text-body-1 mb-4"> {{ line }} </p>
-      <v-list lines="one" v-if="this.info.ul">
-        <v-list-item v-for="(item, key) in this.info.ul" :key="key" class="text-body-1">{{ item }}</v-list-item>
-      </v-list>
+      <div class="min-h-64">
+        <h4 class="text-h4 font-weight-bold mb-4">{{ this.info.title }}</h4>
+        <p v-for="(line, key) in this.info.body" :key="key" class="text-body-1 mb-4"> {{ line }} </p>
+        <v-list lines="one" v-if="this.info.ul">
+          <v-list-item v-for="(item, key) in this.info.ul" :key="key" class="text-body-1">{{ item }}</v-list-item>
+        </v-list>
+      </div>
+      <v-icon v-if="!this.info.lastPage" icon="mdi-gesture-swipe-left" class="text-h2 mx-auto text-grey"></v-icon>
       <router-link to="/select-mode">
-        <v-btn v-if="this.info.lastPage"  color="primary" class="text-body-1 mt-8">Gå vidare</v-btn>
+        <v-btn v-if="this.info.lastPage"  color="primary" class="text-body-1 mt-8">Continue</v-btn>
       </router-link>
     </div>
   </div>

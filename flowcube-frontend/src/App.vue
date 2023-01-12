@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <div class="pa-8">
+    <div>
       <router-view></router-view>
     </div>
   </v-app>
@@ -33,4 +33,16 @@ export default {
 </script>
 
 <style>
+.wrapper-padding {
+  padding: 2rem;
+}
+
+.min-h-32 {
+  min-height: 16rem;
+}
+
+.min-h-64 {
+  min-height: 32rem;
+}
+
 </style>
