@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2 class="text-h4 font-weight-bold mb-8">Välj ett läge</h2>
-        <div class="d-flex flex-wrap cards">
+        <div class="d-flex flex-column cards">
           <mode-card
             v-for="(mode, key) in modes"
             :key="key"
@@ -24,8 +24,18 @@ import ModeCard from "@/components/ModeCard.vue"
     data() {
         return {
             modes: [
-                { name: "Läge 1", webhookId: "-TPgvqhjDcca7ZlKFd3WRnoZn" },
-                { name: "Läge 2", webhookId: "-h1ZALAY-UdLtd97nZP6z-aQL" }
+                {
+                  name: "Läge 1",
+                  lightingDescription: "Varmvitt",
+                  soundDescription: "Whale Sounds",
+                  webhookId: "-TPgvqhjDcca7ZlKFd3WRnoZn"
+                },
+                {
+                  name: "Läge 2",
+                  lightingDescription: "Kallt",
+                  soundDescription: "Boomer Sounds",
+                  webhookId: "-h1ZALAY-UdLtd97nZP6z-aQL"
+                },
             ],
             selectedMode: null
         }
