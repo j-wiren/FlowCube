@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<h2 class="text-h4 font-weight-bold mb-8">Anpassa din session</h2>
-		<div class="text-h5">Hur länge vill du plugga?</div>
+		<h2 class="text-h4 font-weight-bold mb-8">Adjust your session</h2>
+		<div class="text-h5">How long study sessions?</div>
 		<v-slider
 			v-model="studySlider"
 			thumb-label="always"
@@ -13,7 +13,7 @@
 			class="mt-8 slider"
 			>
 		</v-slider>
-		<div class="text-h5">Hur lång paus efter sessionen?</div>
+		<div class="text-h5">How long break in between sessions?</div>
 		<v-slider
 				v-model="breakSlider"
 				thumb-label="always"
@@ -26,7 +26,7 @@
 				>
 		</v-slider>
 		<router-link to="/study-mode">
-				<v-btn @click="updateTimerLengths" color="primary" class="text-body-1 mt-8">Gå vidare</v-btn>
+				<v-btn @click="updateTimerLengths" color="primary" class="text-body-1 mt-8">Continue</v-btn>
 		</router-link>
 	</div>
 </template>

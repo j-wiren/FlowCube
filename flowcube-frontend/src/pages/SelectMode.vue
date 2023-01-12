@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2 class="text-h4 font-weight-bold mb-8">Välj ett läge</h2>
+        <h2 class="text-h4 font-weight-bold mb-8">Select your preferred mode</h2>
         <div class="d-flex flex-column cards">
           <mode-card
             v-for="mode in modes"
@@ -9,7 +9,7 @@
           </mode-card>
         </div>
         <router-link to="/set-timer">
-            <v-btn @click="saveSelectedMode" color="primary" class="text-body-1 mt-8">Gå vidare</v-btn>
+            <v-btn @click="saveSelectedMode" color="primary" class="text-body-1 mt-8">Continue</v-btn>
         </router-link>
     </div>
 </template>
@@ -24,14 +24,14 @@ import ModeCard from "@/components/ModeCard.vue"
         return {
             modes: [
                 {
-                  name: "Läge 1",
-                  lightingDescription: "Varmvitt",
+                  name: "Mode 1",
+                  lightingDescription: "Warm White",
                   soundDescription: "Whale Sounds",
                   webhookId: "-TPgvqhjDcca7ZlKFd3WRnoZn"
                 },
                 {
-                  name: "Läge 2",
-                  lightingDescription: "Kallt",
+                  name: "Mode 2",
+                  lightingDescription: "Cold",
                   soundDescription: "Boomer Sounds",
                   webhookId: "-h1ZALAY-UdLtd97nZP6z-aQL"
                 },
