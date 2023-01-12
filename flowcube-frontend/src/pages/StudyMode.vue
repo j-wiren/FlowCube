@@ -11,7 +11,7 @@
         <v-btn color="red" @click="cancel">Avbryt</v-btn>
       </div>
     </div>
-    <p class="mt-8 text-h5">Antal studiesessioner: {{ studyCount }}</p>
+    <p class="mt-8 text-h5">engelska: {{ studyCount }}</p>
   </div>
 </template>
 
