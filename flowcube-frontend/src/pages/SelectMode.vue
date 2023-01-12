@@ -87,7 +87,7 @@ import ModeCard from "@/components/ModeCard.vue"
         console.log("saved ", this.$root.selectedMode.name, "as selected mode." )
       },
       async doThing(webhook) { 
-        response = await fetch('http://192.168.1.54:9102/api/webhook/' + webhook, {
+        response = await fetch('localhost:8123/api/webhook/' + webhook, {
           method: 'POST', 
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
