@@ -1,26 +1,29 @@
 <template>
     <div>
-        <h2 class="text-h4 font-weight-bold mb-8">Select your preferred mode</h2>
-        <div class="d-flex flex-column cards">
-          <mode-card
-            v-for="(mode, key) in modes"
-            :key="key"
-            @select="selectMode(mode)"
-            @preview-mode="doThing(mode.webhookId)"
-            :mode="mode">
-          </mode-card>
-        </div>
-        <router-link to="/set-timer">
-            <v-btn @click="saveSelectedMode" color="primary" class="text-body-1 mt-8">Continue</v-btn>
-        </router-link>
+      <back-button />
+      <h2 class="text-h4 font-weight-bold mb-8">Select your preferred mode</h2>
+      <div class="d-flex flex-column cards">
+        <mode-card
+          v-for="(mode, key) in modes"
+          :key="key"
+          @select="selectMode(mode)"
+          @preview-mode="doThing(mode.webhookId)"
+          :mode="mode">
+        </mode-card>
+      </div>
+      <router-link to="/set-timer">
+          <v-btn @click="saveSelectedMode" color="primary" class="text-body-1 mt-8">Continue</v-btn>
+      </router-link>
     </div>
 </template>
 
 <script>
 import ModeCard from "@/components/ModeCard.vue"
+import BackButton from "@/components/BackButton.vue"
   export default ({
     components: {
-      ModeCard
+      ModeCard,
+      BackButton
     },
     data() {
         return {
@@ -87,7 +90,7 @@ import ModeCard from "@/components/ModeCard.vue"
         console.log("saved ", this.$root.selectedMode.name, "as selected mode." )
       },
       async doThing(webhook) { 
-        let webHookUrl = ('http://' + this.$root.hostName + ':3000/api/webhook/' + webhook)
+        let webHookUrl = ('http://' + this.$root.hostName + ':8123/api/webhook/' + webhook)
         console.log(webHookUrl)
         response = await fetch(webHookUrl, {
           method: 'POST', 

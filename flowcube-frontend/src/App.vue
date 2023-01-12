@@ -16,7 +16,7 @@ export default {
       hostName: null,
       breakMode: {
         name: "break",
-        webhookId: "-WE3U7f7hEkxkSLxw9pMT4Psx"
+        webhookId: "neutral"
       }
     }
   },

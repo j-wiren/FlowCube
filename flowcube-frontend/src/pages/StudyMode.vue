@@ -1,5 +1,6 @@
 <template>
   <div id="timer">
+    <back-button />
     <h2 class="text-h4 font-weight-bold">{{ title }}</h2>
     <ol class="pa-8">
       <li v-for="listItem in body" :key="listItem.index" class="">{{ listItem }}</li>
@@ -19,9 +20,11 @@
 </template>
 
 <script>
-
+import BackButton from '@/components/BackButton.vue'
 export default {
   name: 'timer',
+  components: { BackButton },
+  
   data() {
     return {
       title: "Time to study!",
@@ -38,13 +41,13 @@ export default {
         "Put your phone on the table, screen down",
         "The lights will indicate when it's time for a break"
       ],
-      loeadingMessages: [
-        "Don't forget to hydrate!",
-        "Tip: take a short walk in the room too get your blood flowing",
-        "Remember to stretch your neck and back",
-        "If you're feeling exhausted, have a snack!",
-        "Try changing the Flow mode if it's not working for you",
-        "Try to avoid overworking yourself, it could affect your Flow negatively"
+      loadingMessages: [
+        "Don't forget to hydrate! 💦",
+        "Tip: take a short walk in the room too get your blood flowing 💃",
+        "Remember to stretch your neck and back 🙆",
+        "If you're feeling exhausted, have a snack! 🍫",
+        "Try changing the Flow mode if it's not working for you 💡",
+        "Try to avoid overworking yourself, it could affect your Flow negatively 🧠"
       ]
     }
   },
@@ -89,6 +92,7 @@ export default {
       this.isBreakTime = false
       this.setStudyTime()
       this.title = "Time to get back to studying!"
+      this.setBreakMessage()
     },
 
     cancel: function() {
@@ -107,7 +111,11 @@ export default {
       this.min = 0
       this.sec = this.breakLength
     },
-
+    setBreakMessage: function() {
+      let randomIndex = Math.floor(Math.random() * this.loadingMessages.length)
+      this.body = [this.loadingMessages[randomIndex]]
+      console.log(this.body)
+    },
     async doThing(webhook) { 
       response = await fetch('http://172.20.10.8:8123/api/webhook/' + webhook, {
         method: 'POST', 
