@@ -59,7 +59,7 @@ import ModeCard from "@/components/ModeCard.vue"
                   name: "Jazz",
                   lightingDescription: "Warm White",
                   soundDescription: "Whale Sounds",
-                  webhookId: ""
+                  webhookId: "jazz"
                 },
                 {
                   name: "Doomscrolling",
