@@ -27,7 +27,7 @@
 				>
 		</v-slider>
 		<router-link to="/study-mode">
-				<v-btn @click="updateTimerLengths" color="primary" class="text-body-1 mt-8">Continue</v-btn>
+				<v-btn block @click="updateTimerLengths" color="primary" class="text-body-1 mt-8">Continue</v-btn>
 		</router-link>
 	</div>
 </template>

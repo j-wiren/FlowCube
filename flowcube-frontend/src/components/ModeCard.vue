@@ -5,9 +5,9 @@
       class="d-flex w-100 flex-column gap-8 rounded-xl pa-8"
       :class="mode.selected ? 'selection-outline' : 'selection-outline-none'" elevation="5">
       <h4 class="text-h5 font-weight-bold">{{ mode.name }}</h4>
-      <p><v-icon icon="mdi-lightbulb-variant"></v-icon>{{ mode.lightingDescription }}</p>
-      <p><v-icon icon="mdi-speaker"></v-icon>{{ mode.soundDescription }}</p>
-      <v-btn @click="$emit('previewMode')" color="white" class="font-weight-bold" variant="outlined">Preview</v-btn>
+      <p><v-icon icon="mdi-lightbulb-variant" class="mr-2"></v-icon>{{ mode.lightingDescription }}</p>
+      <p><v-icon icon="mdi-speaker" class="mr-2"></v-icon>{{ mode.soundDescription }}</p>
+      <v-btn @click="$emit('previewMode')" color="white" class="font-weight-bold mt-4" variant="outlined">Preview</v-btn>
     </v-card>
   </div>
 </template>

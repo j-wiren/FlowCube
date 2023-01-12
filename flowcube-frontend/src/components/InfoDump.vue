@@ -10,7 +10,7 @@
       </div>
       <v-icon v-if="!this.info.lastPage" icon="mdi-gesture-swipe-left" class="text-h2 mx-auto text-grey"></v-icon>
       <router-link to="/select-mode">
-        <v-btn v-if="this.info.lastPage"  color="primary" class="text-body-1 mt-8">Continue</v-btn>
+        <v-btn v-if="this.info.lastPage" block color="primary" class="text-body-1 mt-8">Continue</v-btn>
       </router-link>
     </div>
   </div>

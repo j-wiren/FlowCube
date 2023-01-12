@@ -33,6 +33,12 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: Inter, 'Proxima Nova', Helvetica, sans-serif;
+}
+
 .wrapper-padding {
   padding: 2rem;
 }
@@ -42,7 +48,11 @@ export default {
 }
 
 .min-h-64 {
-  min-height: 32rem;
+  min-height: 24rem;
+}
+
+v-btn {
+  text-decoration: none;
 }
 
 </style>

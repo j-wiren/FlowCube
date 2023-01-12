@@ -11,9 +11,17 @@
           :mode="mode">
         </mode-card>
       </div>
-      <router-link to="/set-timer">
-          <v-btn @click="saveSelectedMode" color="primary" class="text-body-1 mt-8">Continue</v-btn>
-      </router-link>
+      <v-btn @click.prevent="saveSelectedMode" block color="primary" class="text-body-1 mt-8">Continue</v-btn>
+      <v-dialog v-model="dialog">
+        <v-card>
+          <v-card-text>
+            Whoops! Seems like you didn't select a mode just there 🤔<br>Try again!
+          </v-card-text>
+          <v-card-actions>
+          <v-btn color="primary" block @click="dialog = false">Close</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </div>
 </template>
 
@@ -85,7 +93,8 @@ import BackButton from "@/components/BackButton.vue"
                   selected: false
                 }
             ],
-            selectedMode: null
+            selectedMode: null,
+            dialog: false
         }
     },
     methods: {
@@ -99,8 +108,13 @@ import BackButton from "@/components/BackButton.vue"
         });
       },
       saveSelectedMode: function() {
+        if ( this.selectedMode == null ) {
+          this.dialog = true
+          return
+        }
         this.$root.selectedMode = this.selectedMode
         console.log("saved ", this.$root.selectedMode.name, "as selected mode." )
+        this.$router.push('/set-timer')
       },
       async doThing(webhook) { 
         let webHookUrl = ('http://' + this.$root.hostName + ':8123/api/webhook/' + webhook)

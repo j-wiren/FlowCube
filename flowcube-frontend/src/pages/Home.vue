@@ -3,7 +3,7 @@
         <h4 class="text-h4 font-weight-bold mb-8">Choose an available Flow Cube</h4>
         <select-cube></select-cube>
         <router-link to="/flow-info">
-            <v-btn color="blue text-h6 mt-8">Read the guide to Flow></v-btn>
+            <v-btn size="x-large" color="blue font-weight-bold text-h6 mx-auto mt-8">Read our guide to Flow<v-icon icon="mdi-chevron-right"></v-icon></v-btn>
         </router-link>
     </div>
 </template>
