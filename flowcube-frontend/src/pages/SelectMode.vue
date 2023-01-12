@@ -4,7 +4,7 @@
         <div class="d-flex flex-column cards">
           <mode-card
             v-for="mode in modes"
-            @select-mode="selectMode(mode)"
+            @preview-mode="doThing(mode.webhookId)"
             :mode="mode">
           </mode-card>
         </div>
