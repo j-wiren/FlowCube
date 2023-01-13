@@ -20,7 +20,7 @@ export default {
       },
       breakMode: {
         name: "break",
-        webhookId: "paus"
+        webhookId: "blinking"
       }
 
     }
