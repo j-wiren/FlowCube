@@ -37,13 +37,6 @@ import BackButton from "@/components/BackButton.vue"
         return {
             modes: [
                 {
-                  name: "Standard Mode",
-                  lightingDescription: "Low light, medium white warmth",
-                  soundDescription: "Background music",
-                  webhookId: "standard",
-                  selected: false
-                },
-                {
                   name: "Full Blast",
                   lightingDescription: "Medium light, cold",
                   soundDescription: "Pink noise",
