@@ -113,6 +113,7 @@ import BackButton from "@/components/BackButton.vue"
           return
         }
         this.$root.selectedMode = this.selectedMode
+        this.doThing(this.$root.breakMode.webhookId)
         console.log("saved ", this.$root.selectedMode.name, "as selected mode." )
         this.$router.push('/set-timer')
       },

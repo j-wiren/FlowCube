@@ -14,10 +14,15 @@ export default {
       breakLength: 5,
       selectedMode: null,
       hostName: null,
+      standardMode: {
+        name: "standard",
+        webhookId: "neutral"
+      },
       breakMode: {
         name: "break",
-        webhookId: "neutral"
+        webhookId: "paus"
       }
+
     }
   },
   methods: {
