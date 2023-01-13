@@ -72,6 +72,7 @@ export default {
         this.doThing(this.$root.selectedMode.webhookId)
       }
 
+      this.doThing(this.$root.breakMode.webhookId)
       this.timerOn = true;
     },
 
@@ -86,7 +87,7 @@ export default {
       if (!this.isBreakTime) {
         this.isBreakTime = true
         this.setBreakTime()
-        this.doThing(this.$root.breakMode.webhookId)
+        this.doThing(this.$root.blinkingMode.webhookId)
         this.studyCount++
         this.title = "Time for a break!"
         this.setBreakMessage()

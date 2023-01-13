@@ -20,6 +20,10 @@ export default {
       },
       breakMode: {
         name: "break",
+        webhookId: "break"
+      },
+      blinkingMode: {
+        name: "blinking",
         webhookId: "blinking"
       }
 
