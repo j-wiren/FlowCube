@@ -51,7 +51,7 @@ body {
   min-height: 24rem;
 }
 
-v-btn {
+v-btn:visited {
   text-decoration: none;
 }
 
