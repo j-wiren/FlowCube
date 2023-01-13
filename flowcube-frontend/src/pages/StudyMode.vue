@@ -119,7 +119,7 @@ export default {
       console.log(this.body)
     },
     async doThing(webhook) { 
-      response = await fetch('http://172.20.10.8:8123/api/webhook/' + webhook, {
+      response = await fetch('http://http://10.204.0.58:8123/api/webhook/' + webhook, {
         method: 'POST', 
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'

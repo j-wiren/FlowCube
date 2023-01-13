@@ -117,7 +117,7 @@ import BackButton from "@/components/BackButton.vue"
         this.$router.push('/set-timer')
       },
       async doThing(webhook) { 
-        let webHookUrl = ('http://' + this.$root.hostName + ':8123/api/webhook/' + webhook)
+        let webHookUrl = ('http://10.204.0.58:8123/api/webhook/' + webhook)
         console.log(webHookUrl)
         response = await fetch(webHookUrl, {
           method: 'POST', 
